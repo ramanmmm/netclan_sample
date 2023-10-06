@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "762180304272",
+    "firebase_url": "https://attendio-745ad.firebaseio.com",
+    "project_id": "attendio-745ad",
+    "storage_bucket": "attendio-745ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762180304272:android:157e2a8a236812a66d8715",
+        "android_client_info": {
+          "package_name": "com.example.netclansample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762180304272-5aehuajv2mnjqp6lougecialqghl7fsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfMS0fGdrKw5oHE8SaC8MtpJRafMyM5Pg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762180304272-5aehuajv2mnjqp6lougecialqghl7fsd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

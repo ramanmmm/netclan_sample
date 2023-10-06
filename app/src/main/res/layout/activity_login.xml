@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="10dp"
+            app:contentPadding="20dp"
+            tools:ignore="MissingConstraints">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv1"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:text="Let's Get Started"/>
+                <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv1"
+
+                android:textStyle="bold"
+                android:id="@+id/cc"
+                android:hint="+91,INDIA"
+                android:layout_marginTop="10dp"/>
+                <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cc"
+                android:textStyle="bold"
+                android:id="@+id/phone"
+                android:inputType="phone"
+                android:hint="Please Enter Phone number"
+                android:layout_marginTop="10dp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONTINUE!"
+                    android:id="@+id/continue1"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/phone"
+                    android:background="@drawable/round"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/changephone"
+                    android:layout_below="@+id/continue1"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Change phone number?"/>
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

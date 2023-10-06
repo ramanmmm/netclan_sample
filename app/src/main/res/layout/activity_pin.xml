@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pin1"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp">
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verification Code "
+        android:textSize="30sp"
+        android:id="@+id/tv1"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/tv2"
+        android:layout_height="wrap_content"
+        android:text="Please type verification code sent to "
+        android:layout_below="@+id/tv1"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shownumber"
+        android:layout_toRightOf="@+id/tv2"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="12dp"/>
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinview"
+        app:itemCount="6"
+        app:itemWidth="50dp"
+        app:itemHeight="50dp"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:itemBackground="@color/white"
+        android:layout_gravity="center"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:cursorVisible="true"
+        app:hideLineWhenFilled="false"
+        app:itemRadius="10dp"
+        style="@style/PinWidget.PinView"
+        android:layout_below="@+id/tv2"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resend"
+        android:textSize="16dp"
+        android:text="Did't get code?Resend"
+        android:layout_below="@+id/pinview"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/verifyotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:layout_toRightOf="@+id/tv2"
+        android:layout_below="@+id/pinview"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="450dp"
+        />
+
+</RelativeLayout>
