@@ -52,6 +52,7 @@ public class Login extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (phone.getText().toString().length() <= 9)
                     phone.setError("phone no not valid!");
                 if (auto.getText().toString().length() <= 3)
@@ -65,6 +66,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void sendverificationCode(String num) {
+        findViewById(R.id.show).setVisibility(View.VISIBLE);
         String a = auto.getText().toString();
         temp = "";
         int i = 0;

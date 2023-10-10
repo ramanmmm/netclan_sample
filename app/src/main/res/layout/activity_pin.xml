@@ -61,15 +61,26 @@
         android:layout_height="wrap_content"
         android:id="@+id/resend"
         android:textSize="16dp"
-        android:text="Did't get code?Resend"
+        android:text="Did't get code? Resend!"
         android:layout_below="@+id/pinview"
         android:layout_marginTop="40dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hide"
+        android:textSize="18dp"
+        android:visibility="gone"
+        android:text="Wait for 1 min to sent otp again!"
+        android:layout_below="@+id/resend"
+        android:layout_marginTop="10dp"/>
 
     <Button
         android:id="@+id/verifyotp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Verify"
+        android:clickable="false"
+        android:keyboardNavigationCluster="true"
         android:layout_toRightOf="@+id/tv2"
         android:layout_below="@+id/pinview"
         android:layout_alignParentEnd="true"

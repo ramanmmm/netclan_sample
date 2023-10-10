@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
     public void expend1(View view) {
         int v1=(details1.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
         int a=(b1.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
+        findViewById(R.id.detail2).setVisibility(View.GONE);
+        findViewById(R.id.detail3).setVisibility(View.GONE);
         TransitionManager.beginDelayedTransition(layout1,new AutoTransition());
         details1.setVisibility(v1);
         b1.setVisibility(a);
@@ -66,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
     public void expend2(View view) {
         int v2=(details2.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
         int b=(b2.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
+        findViewById(R.id.detail1).setVisibility(View.GONE);
+        findViewById(R.id.detail3).setVisibility(View.GONE);
         TransitionManager.beginDelayedTransition(layout2,new AutoTransition());
         details2.setVisibility(v2);
         b2.setVisibility(b);
@@ -74,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
     public void expend3(View view) {
         int v3=(details3.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
         int c=(b3.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
+        findViewById(R.id.detail1).setVisibility(View.GONE);
+        findViewById(R.id.detail2).setVisibility(View.GONE);
         TransitionManager.beginDelayedTransition(layout3,new AutoTransition());
         details3.setVisibility(v3);
         b3.setVisibility(c);

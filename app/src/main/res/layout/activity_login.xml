@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:id="@+id/card"
             android:layout_centerVertical="true"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
@@ -35,7 +36,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv1"
-
                 android:textStyle="bold"
                 android:id="@+id/cc"
                 android:hint="+91,INDIA"
@@ -54,6 +54,8 @@
                     android:layout_height="wrap_content"
                     android:text="CONTINUE!"
                     android:id="@+id/continue1"
+                    android:keyboardNavigationCluster="true"
+                    android:clickable="true"
                     android:textColor="#FFFFFF"
                     android:layout_centerHorizontal="true"
                     android:layout_below="@+id/phone"
@@ -71,5 +73,15 @@
 
         </RelativeLayout>
         </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/show"
+            android:layout_below="@+id/card"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:text="Please wait a While!"/>
     </RelativeLayout>
 </RelativeLayout>

@@ -13,10 +13,13 @@ import android.widget.Toast;
 import com.chaos.view.PinView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+
+import java.util.concurrent.TimeUnit;
 
 
 public class pin1 extends AppCompatActivity {
@@ -37,8 +40,6 @@ public class pin1 extends AppCompatActivity {
         t.setText(String.format(getIntent().getStringExtra("001")));
         verificationId=getIntent().getStringExtra("Verify");
         button=findViewById(R.id.verifyotp);
-
-        // setting onClickListener on Button
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,13 +59,43 @@ public class pin1 extends AppCompatActivity {
                     }
                     else {
                         Toast.makeText(getApplicationContext(),"Please enter correct otp",Toast.LENGTH_LONG).show();
-
                     }
                     }
                 });
             }
             }
         });
+        findViewById(R.id.resend).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.hide).setVisibility(View.VISIBLE);
+                PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                        getIntent().getStringExtra("001"),
+                        60,
+                        TimeUnit.SECONDS,
+                        pin1.this,
+                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                            @Override
+                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+
+                            }
+
+                            @Override
+                            public void onVerificationFailed(@NonNull FirebaseException e) {
+                                Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_LONG).show();
+                            }
+
+                            @Override
+                            public void onCodeSent(@NonNull String newverificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+
+                            verificationId=newverificationId;
+                            Toast.makeText(pin1.this,"Otp sent again!",Toast.LENGTH_LONG).show();
+
+                            }
+                        });
+            }
+        });
+
     }
 }
 
