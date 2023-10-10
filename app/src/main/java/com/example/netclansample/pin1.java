@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,14 +27,17 @@ public class pin1 extends AppCompatActivity {
 
     PinView pinView;
     Button button;
-    TextView t;
+    TextView t,hide1;
+    private CountDownTimer countDownTimer;
+    private long timeinMiliSec=60000;
+    boolean timerunning;
     String verificationId="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pin);
-
+        hide1=findViewById(R.id.hide);
         // hookers (binding view)
         pinView=findViewById(R.id.pinview);
         t=findViewById(R.id.shownumber);
@@ -66,9 +70,11 @@ public class pin1 extends AppCompatActivity {
             }
         });
         findViewById(R.id.resend).setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                findViewById(R.id.hide).setVisibility(View.VISIBLE);
+                startStop();
+                hide1.setVisibility(View.VISIBLE);
                 PhoneAuthProvider.getInstance().verifyPhoneNumber(
                         getIntent().getStringExtra("001"),
                         60,
@@ -93,9 +99,45 @@ public class pin1 extends AppCompatActivity {
 
                             }
                         });
+
             }
         });
 
+    }
+
+    private void startStop() {
+        if(timerunning){
+            stopTimer();
+        }
+        else{
+            startTimer();
+        }
+    }
+
+    private void startTimer() {
+        countDownTimer=new CountDownTimer(timeinMiliSec,1000) {
+            @Override
+            public void onTick(long l) {
+            timeinMiliSec=l;
+            updateTimer();
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();
+        timerunning=true;
+    }
+
+    public void updateTimer() {
+        int a=(int)timeinMiliSec%60000/1000;
+        hide1.setText(""+a);
+    }
+
+    private void stopTimer() {
+        countDownTimer.cancel();
+        timerunning=false;
     }
 }
 

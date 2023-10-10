@@ -53,12 +53,14 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
                 if (phone.getText().toString().length() <= 9)
                     phone.setError("phone no not valid!");
                 if (auto.getText().toString().length() <= 3)
                     auto.setError("country  is required!");
                 if (phone.getText().toString().length() > 9 && auto.getText().toString().length() > 2) {
                     String number = phone.getText().toString();
+                    findViewById(R.id.p).setVisibility(View.VISIBLE);
                     sendverificationCode(number);
                 }
             }
@@ -90,12 +92,13 @@ public class Login extends AppCompatActivity {
 
                     @Override
                     public void onVerificationFailed(@NonNull FirebaseException e) {
+                        findViewById(R.id.p).setVisibility(View.GONE);
                         Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-
+                        findViewById(R.id.p).setVisibility(View.GONE);
                         Intent intent = new Intent(getApplicationContext(), pin1.class);
                         intent.putExtra("001", temp+num);
                         intent.putExtra("Verify", verificationId);

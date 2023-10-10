@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void expend1(View view) {
+        b2.setVisibility(View.GONE);
+        b3.setVisibility(View.GONE);
         int v1=(details1.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
         int a=(b1.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
         findViewById(R.id.detail2).setVisibility(View.GONE);
@@ -66,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void expend2(View view) {
+        b1.setVisibility(View.GONE);
+        b3.setVisibility(View.GONE);
         int v2=(details2.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
         int b=(b2.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
         findViewById(R.id.detail1).setVisibility(View.GONE);
@@ -76,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void expend3(View view) {
+        b1.setVisibility(View.GONE);
+        b2.setVisibility(View.GONE);
         int v3=(details3.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
         int c=(b3.getVisibility()==View.GONE)?View.VISIBLE:View.GONE;
         findViewById(R.id.detail1).setVisibility(View.GONE);

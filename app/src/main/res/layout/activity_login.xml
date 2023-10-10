@@ -61,6 +61,15 @@
                     android:layout_below="@+id/phone"
                     android:background="@drawable/round"
                     android:layout_marginTop="10dp"/>
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/p"
+                    android:layout_below="@+id/phone"
+                    android:layout_toRightOf="@+id/continue1"
+                    android:pointerIcon="arrow"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:id="@+id/changephone"

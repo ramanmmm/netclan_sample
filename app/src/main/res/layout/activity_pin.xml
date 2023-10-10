@@ -68,9 +68,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/hide"
-        android:textSize="18dp"
+        android:textSize="24dp"
         android:visibility="gone"
-        android:text="Wait for 1 min to sent otp again!"
+        android:text="60"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/resend"
         android:layout_marginTop="10dp"/>
 
