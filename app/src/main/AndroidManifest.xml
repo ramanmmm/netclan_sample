@@ -16,6 +16,9 @@
         android:theme="@style/Theme.NetClanSample"
         tools:targetApi="31">
         <activity
+            android:name=".change"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="false" />
         <activity

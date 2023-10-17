@@ -4,12 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
-
+    tools:context=".change">
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bg">
+        android:layout_width="wrap_content"
+        android:id="@+id/rr1"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="300sp"
+            android:src="@drawable/changebg"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/rr1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,30 +35,23 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <TextView
-                android:layout_width="wrap_content"
-                android:id="@+id/tv1"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:layout_centerHorizontal="true"
-                android:text="Let's Get Started"/>
+
                 <AutoCompleteTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv1"
-                android:textStyle="bold"
-                android:id="@+id/cc"
-                android:hint="+91,INDIA"
-                android:layout_marginTop="10dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:id="@+id/cc"
+                    android:hint="+91,INDIA"
+                    android:layout_marginTop="10dp"/>
                 <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cc"
-                android:textStyle="bold"
-                android:id="@+id/phone"
-                android:inputType="phone"
-                android:hint="Please Enter Phone number"
-                android:layout_marginTop="10dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cc"
+                    android:textStyle="bold"
+                    android:id="@+id/phone"
+                    android:inputType="phone"
+                    android:hint="Please Enter Phone number"
+                    android:layout_marginTop="10dp"/>
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -70,27 +73,16 @@
                     android:pointerIcon="arrow"
                     android:visibility="gone"
                     android:layout_marginLeft="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:id="@+id/changephone"
-                    android:layout_below="@+id/continue1"
-                    android:layout_height="wrap_content"
-                    android:textColor="#040A20"
-                    android:textSize="15dp"
-                    android:layout_centerHorizontal="true"
-                    android:text="Change phone number?"/>
 
-        </RelativeLayout>
+
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:id="@+id/show"
-            android:layout_below="@+id/card"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:visibility="gone"
-            android:textSize="15dp"
-            android:layout_centerHorizontal="true"
-            android:text="Please wait a While!"/>
+
+
+
+
     </RelativeLayout>
+
+
+
 </RelativeLayout>

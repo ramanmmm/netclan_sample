@@ -37,6 +37,7 @@ public class pin1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pin);
+        startStop();
         hide1=findViewById(R.id.hide);
         // hookers (binding view)
         pinView=findViewById(R.id.pinview);
@@ -124,7 +125,6 @@ public class pin1 extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-
             }
         }.start();
         timerunning=true;

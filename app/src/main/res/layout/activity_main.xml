@@ -9,13 +9,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Join As"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="180dp"
+        android:padding="2dp"
         android:gravity="center"
         android:id="@+id/join"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:textColor="#000000"
-        android:textSize="40dp"/>
+        android:textSize="30dp"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv1"
@@ -23,13 +24,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/join"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:onClick="expend1"
         app:cardCornerRadius="25dp"
-        app:cardElevation="10dp"
-        app:contentPadding="20dp"
+        app:cardElevation="20dp"
         tools:ignore="MissingConstraints">
 
         <RelativeLayout
@@ -39,8 +39,8 @@
 
             <ImageView
                 android:id="@+id/image1"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/abc" />
 
             <TextView
@@ -51,8 +51,8 @@
                 android:layout_toRightOf="@+id/image1"
                 android:text="Personal"
                 android:textColor="#000000"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textSize="20sp"
+                />
 
             <TextView
                 android:id="@+id/personaldetail1"
@@ -83,6 +83,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:layout_below="@+id/detail1"
                 android:text="CONFIRM"
+                android:layout_alignParentRight="true"
                 android:textColor="#000000"
                 android:visibility="gone"
                 android:layout_toRightOf="@+id/image1"
@@ -93,95 +94,105 @@
 
 
     <androidx.cardview.widget.CardView
-        android:onClick="expend2"
         android:id="@+id/cv2"
-        android:layout_below="@+id/cv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/cv1"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:padding="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="expend2"
         app:cardCornerRadius="25dp"
-        tools:ignore="MissingConstraints"
-        app:cardElevation="10dp"
-        android:layout_margin="20dp"
-        app:contentPadding="20dp">
+        app:cardElevation="20dp"
+        tools:ignore="MissingConstraints">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
             android:id="@+id/layout2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/image2"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/abc2" />
 
             <TextView
-                android:layout_width="wrap_content"
                 android:id="@+id/personal2"
-                android:layout_toRightOf="@+id/image2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/image2"
                 android:text="Business"
-                android:textStyle="bold"
                 android:textColor="#000000"
-                android:textSize="24sp" />
+                android:textSize="20sp"
+                 />
+
             <TextView
                 android:id="@+id/personaldetail2"
                 android:layout_width="wrap_content"
-                android:layout_marginLeft="15dp"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/image2"
                 android:layout_below="@+id/personal2"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/image2"
                 android:text="world's largest real time service community!"
                 android:textColor="#000000"
                 android:textSize="12sp" />
+
             <TextView
-                android:layout_width="wrap_content"
                 android:id="@+id/detail2"
-                android:layout_marginTop="20dp"
-                android:visibility="gone"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
                 android:layout_below="@+id/personaldetail2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
                 android:text="if you are any kind of service provider and want to sell your services to the community,join as Business user"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:visibility="gone" />
+
             <Button
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
                 android:layout_below="@+id/detail2"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="180dp"
+                android:layout_toRightOf="@+id/image2"
+                android:background="?android:attr/selectableItemBackground"
                 android:text="CONFIRM"
                 android:textColor="#000000"
-                android:visibility="gone"
-                android:layout_toRightOf="@+id/image2"
-                android:layout_marginLeft="180dp"/>
+                android:visibility="gone" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
 
     <androidx.cardview.widget.CardView
-        android:onClick="expend3"
         android:id="@+id/cv3"
-        android:layout_below="@+id/cv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/cv2"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:padding="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="expend3"
         app:cardCornerRadius="25dp"
-        tools:ignore="MissingConstraints"
-        app:cardElevation="10dp"
-        android:layout_margin="20dp"
-        app:contentPadding="20dp">
+        app:cardElevation="20dp"
+        tools:ignore="MissingConstraints">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
             android:id="@+id/layout3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/image3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/abc3" />
 
             <TextView
@@ -192,41 +203,44 @@
                 android:layout_toRightOf="@+id/image3"
                 android:text="Merchant"
                 android:textColor="#000000"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textSize="20sp"
+                 />
 
             <TextView
                 android:id="@+id/personaldetail3"
                 android:layout_width="wrap_content"
-                android:layout_marginLeft="15dp"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/image3"
                 android:layout_below="@+id/personal3"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/image3"
                 android:text="World's largest real time merchant's community!"
                 android:textColor="#000000"
                 android:textSize="11sp" />
+
             <TextView
-                android:layout_width="wrap_content"
                 android:id="@+id/detail3"
-                android:layout_marginTop="20dp"
-                android:visibility="gone"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
                 android:layout_below="@+id/personaldetail3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
                 android:text="if you are a merchant,a shop,a restaurant or any establishment and wants to sell your goods and services to community,join as Merchant User"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:visibility="gone" />
+
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
                 android:layout_below="@+id/detail3"
+                android:layout_marginLeft="180dp"
+                android:layout_toRightOf="@+id/image3"
+                android:background="?android:attr/selectableItemBackground"
                 android:text="CONFIRM"
                 android:textColor="#000000"
-                android:visibility="gone"
-                android:layout_toRightOf="@+id/image3"
-                android:layout_marginLeft="180dp"/>
+                android:layout_alignParentRight="true"
+                android:visibility="gone" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
